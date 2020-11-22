@@ -1,0 +1,122 @@
+/*autorka: Sonia Zieleźny*/
+
+* {
+  font-family: sans-serif;
+  font-weight: lighter;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: mediumaquamarine;
+}
+
+#gameContainer {
+  align-self: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: rgb(255, 222, 191);
+}
+#gameContainer h2 {
+  color: rgb(219, 88, 1);
+}
+
+.menuButton {
+  font-size: 21px;
+  padding: 5px 20px;
+  border: 0;
+  background-color: lightcoral;
+  color: #fff;
+  border-radius: 3px;
+  transition: all 250ms ease-in-out;
+}
+.menuButton:hover {
+  background-color: rgb(202, 105, 113);
+}
+#movesNumber {
+  color: #fff;
+  padding-top: 2vh;
+  text-align: center;
+  background-color: rgba(240, 128, 128, 0.589);
+  border-radius: 3px;
+  text-align: center;
+}
+
+.row {
+  padding: 0.5vh;
+}
+
+.cellButton {
+  padding: 3vh;
+  max-width: 5vh;
+  height: 5vh;
+  background-color: lightseagreen;
+  min-width: 5vh;
+  border-color: rgb(255, 222, 191);
+  border-radius: 2vh;
+  border-width: 0;
+}
+
+.cellButton:focus {
+  background-color: orange;
+}
+
+@media screen and (orientation: landscape) {
+  #gameContainer {
+    border-radius: 0 0 3vh 3vh;
+  }
+
+  #menu {
+    position: absolute;
+    left: 0;
+    padding: 45vh 10vh 10vh 10vh;
+  }
+  #movesNumber {
+    margin-top: 5vh;
+    padding: 5px 20px;
+  }
+  #board {
+    position: absolute;
+    right: 10vh;
+    padding-top: 22vh;
+  }
+  .row {
+    padding: 0;
+  }
+  .cellButton {
+    padding: 0;
+    max-width: 14vh;
+    min-width: 14vh;
+    max-height: 14vh;
+    min-height: 14vh;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  #menu {
+    padding-top: 3vh;
+    background-color: mediumaquamarine;
+    display: flex;
+    width: 100%;
+    border-radius: 2vh 2vh 0 0;
+  }
+
+  #board {
+    background-color: mediumaquamarine;
+    width: 100%;
+    align-self: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10vh;
+  }
+
+  .cellButton {
+    max-width: 10vh;
+    min-width: 10vh;
+    max-height: 10vh;
+    min-height: 10vh;
+  }
+}
